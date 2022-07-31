@@ -43,3 +43,38 @@
 // val5[0]='bird';
 // val5.push("monkey");
 // console.log(val5);
+
+// テンプレート文字列
+
+const name = "藤田";
+
+const age = 23;
+
+const message1 = "私の名前は" + name + "です年齢は" + age + "です。";
+
+console.log(message1);
+
+//テンプレート文字列を用いた方法
+const message2 = `私の名前は${name}です。年齢は${age}だよ。`;
+console.log(message2);
+
+/**アロー関数
+ *
+ */
+
+//  function func1(str)  {
+//    return str;
+//  }
+
+const func1 = function (str) {
+  return str;
+};
+
+console.log(func1("func1です"));
+
+//アロー関数
+const func2 = (str) => {
+  return str;
+};
+
+console.log(func2("func2です"));
