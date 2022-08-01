@@ -95,11 +95,57 @@
 // const message2 = `名前は${name}です。年齢は${age}歳です。」`;
 // console.log(message1);
 
-const myProfile = ["祥吾", 8];
+// const myProfile = ["祥吾", 8];
 
-const message3 = `名前は${myProfile[0]}です。年齢は${myProfile[1]}歳です。」`;
-console.log(message3);
+// const message3 = `名前は${myProfile[0]}です。年齢は${myProfile[1]}歳です。」`;
+// console.log(message3);
 
-const [name, age] = myProfile;
-const message4 = `名前は${name}です。年齢は${age}歳dayo`;
-console.log(message4);
+// const [name, age] = myProfile;
+// const message4 = `名前は${name}です。年齢は${age}歳dayo`;
+// console.log(message4);
+
+/**
+ * デフォルト値、引数など
+ */
+
+//  const sayHello = (name = '藤田です') => console.log(`こんにちは！${name}さん！`);
+
+// //  sayHello("祥吾です");
+// sayHello();
+
+/**
+ * スプレット構文　...
+ */
+
+//配列の展開
+// const arr1 = [1, 2];
+// console.log(arr1);
+// console.log(...arr1); //配列の中身を順番に処理
+
+// const sumFunc = (num1, num2) => console.log(num1 + num2);
+// sumFunc(arr1[0],arr1[1]);
+// sumFunc(...arr1);
+
+//まとめる
+// const arr2 = [1, 2, 3, 4, 5];
+// const [num1, num2, ...arr3] = arr2;
+// console.log(num1);
+// console.log(num2);
+// console.log(arr3);
+
+//配列のコピー、結合
+const arr4 = [10, 20];
+const arr5 = [30, 40];
+
+const arr6 = [...arr4]; //コピー
+arr6[0] = 100;
+console.log(arr6);
+console.log(arr4); //スプレット構文はコピー元が変化しない
+
+// const arr7 = [...arr4,...arr5];//結合
+// console.log(arr7);
+
+// const arr8 = arr4;
+// arr8[0] = 100;
+// console.log(arr8);
+// console.log(arr4);//スプレット構文を使わないでコピーするとコピーもとまで変更されてしまう
