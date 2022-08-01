@@ -134,13 +134,13 @@
 // console.log(arr3);
 
 //配列のコピー、結合
-const arr4 = [10, 20];
-const arr5 = [30, 40];
+// const arr4 = [10, 20];
+// const arr5 = [30, 40];
 
-const arr6 = [...arr4]; //コピー
-arr6[0] = 100;
-console.log(arr6);
-console.log(arr4); //スプレット構文はコピー元が変化しない
+// const arr6 = [...arr4]; //コピー
+// arr6[0] = 100;
+// console.log(arr6);
+// console.log(arr4); //スプレット構文はコピー元が変化しない
 
 // const arr7 = [...arr4,...arr5];//結合
 // console.log(arr7);
@@ -149,3 +149,79 @@ console.log(arr4); //スプレット構文はコピー元が変化しない
 // arr8[0] = 100;
 // console.log(arr8);
 // console.log(arr4);//スプレット構文を使わないでコピーするとコピーもとまで変更されてしまう
+
+/**
+ * mapやfilterを使った配列の処理
+ */
+
+// const nameArr = ["山田", "田中", "藤田", "大久保", "重中"];
+// for (let index = 0; index < nameArr.length; index++) {
+//   console.log(`${index}番目は${nameArr[index]}です`);
+// }
+
+//map関数を使えば中身を順番に取り出して処理できる
+// const nameArr2 = nameArr.map((name) => {
+//   return name;
+// });
+
+// console.log(nameArr2);
+
+//マップの中で番号で区別したいときは引数を二つ用意することで二つ目に番号が入って来る。
+// nameArr.map((name,index)=>console.log(`${index+1}番目は${name}です`));
+
+//   //フィルター
+// const numArr = [1,2,3,,4,5];
+// const newNumArr = numArr.filter((num)=>num%2===1)//一致した条件だけ返す。（今回は奇数だけ）
+// console.log(newNumArr);
+
+// const newNameArr = nameArr.map((name) => {
+//   if (name === "藤田") {
+//     return name;
+//   } else {
+//     return `${name}さん`;
+//   }
+// });
+
+// console.log(newNameArr);
+
+/**
+ * 三項演算子
+ */
+
+//ある条件?条件がtrueの時：falseのとき
+// const val1 = 1 > 0 ? "trueです" : "falseです";
+// console.log(val1);
+
+// const num = 1300;
+// //数値の場合は金額を,区切りで表示、それ以外の場合は数値を入力してください。
+// const formattedNum =
+//   typeof num === "number" ? num.toLocaleString() : "数値を入力してください";
+// console.log(formattedNum);
+
+// const checkSum =(num1,num2)=>num1+num2>100?'100を超えています':'許容範囲内です';
+
+// console.log(checkSum(50,30));
+
+/**
+ * 論理演算子の本当の意味を知ろう　 && || */
+
+const flag1 = true;
+const flag2 = false;
+
+if (flag1 || flag2) {
+  console.log("1か２はtrueになります");
+}
+
+if (flag1 && flag2) {
+  console.log("1も２にもtrueになります");
+}
+
+// ||は左側がfalseなら右側を返す
+const num = null; //nullはfalse判定
+const fee = num || "金額未設定です";
+console.log(fee);
+
+//&&は左側がtrueなら右側を返す
+const num2 = null;
+const fee2 = num2 && "何か設定されました";
+console.log(fee2);
